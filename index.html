@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body class="bg-secondary">
+
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-xl-3">
+                <h4 class="text-light">Search For a City</h4>
+                <input type="text" class="form-control" id="search-weather">
+                <button class="btn btn-primary w-100 mt-3">Search</button>
+
+                <div class="mt-1" id="search-history">
+                    <h4 class="text-light">Recent Searches</h4>
+                    <button class="btn btn-dark w-100 mb-3">Austin</button>
+                    <button class="btn btn-dark w-100 mb-3">Atlanta</button>
+                    <button class="btn btn-dark w-100 mb-3">Chicago</button>
+                </div>
+            </div>
+            <div class="col-xl-9">
+                <div class="row">
+                    <div id="weather" class="border-5 border-dark col-md-12 border bg-primary rounded p-4">
+                        <h1>Atlanta</h1>
+                        <h3>Temp: 78F</h3>
+                        <h3>Humidity: 40%</h3>
+                        <h3>UV Index: 3</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <h2 class="text-center text-dark mt-4 fw-bolder">5 Day Forecast</h2>
+                    <div id="forecast" class="border-5 border-dark d-flex justify-content-around border p-4 rounded">      
+                            <div class=" border-dark card border-4">
+                                <div class="card-body bg-primary p-4">
+                                  <h5 class="card-title">Day 1</h5>
+                                  <p class="card-text">Temp: 65F</p>
+                                  <p class="card-text">Humidity: 35%</p>
+                                </div>
+                            </div>
+
+                            <div class="border-dark card border-4">
+                                <div class=" card-body bg-primary p-4">
+                                  <h5 class="card-title">Day 2</h5>
+                                  <p class="card-text">Temp: 65F</p>
+                                  <p class="card-text">Humidity: 35%</p>
+                                </div>
+                            </div>
+
+                            <div class="border-dark card border-4">
+                                <div class="card-body bg-primary p-4">
+                                  <h5 class="card-title">Day 3</h5>
+                                  <p class="card-text">Temp: 65F</p>
+                                  <p class="card-text">Humidity: 35%</p>
+                                </div>
+                            </div>
+
+                            <div class="border-dark card border-4">
+                                <div class="card-body bg-primary p-4">
+                                  <h5 class="card-title">Day 4</h5>
+                                  <p class="card-text">Temp: 65F</p>
+                                  <p class="card-text">Humidity: 35%</p>
+                                </div>
+                            </div>
+
+                            <div class="border-dark card border-4">
+                                <div class="card-body bg-primary p-4">
+                                  <h5 class="card-title">Day 5</h5>
+                                  <p class="card-text">Temp: 65F</p>
+                                  <p class="card-text">Humidity: 35%</p>
+                                </div>
+                            </div>
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
