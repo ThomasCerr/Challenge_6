@@ -4,8 +4,8 @@
 // (3) Creates a recent search history div of what was inputted, and saved to local storag
 
 //Miscellaneaous Variables
- const searchInput = document.querySelector('.search-weather')
-
+ var searchInput = document.getElementById('search-weather');
+ var key= '6ba32263f12394fd4bdedac009a4a7b3';
 
 //Current Forecast Variables
 
@@ -43,11 +43,20 @@ const forecastHumidity5 = document.querySelector('.humidity5');
 
 
 
+var fetchLocation = function(){
+    let city = searchInput.value.trim();
+    console.log(city);
+    let apiURL = ('https://api.openweathermap.org/data/2.5/weather?q=' + city + '&appid=' + key);
+    console.log(apiURL)
+
+} 
+
+
 var fetchWeather = function(){
-let key= '6ba32263f12394fd4bdedac009a4a7b3';
+
 let lat= ''
 let lon= ''
-let apiURL='https://api.openweathermap.org/data/2.5/onecall?lat='+lat +'&lon='+lon+'appid='+key;
+let apiURL='https://api.openweathermap.org/data/2.5/onecall?lat='+lat +'&lon='+lon+'&appid='+key;
       
 fetch(apiURL)
             .then(resp=>{
@@ -79,7 +88,8 @@ let html = '<div class="border-dark card border-4">'
 //Click Listener
 $('.btn').on('click', function(){
     console.log('hello');
-    fetchWeather()
+    fetchLocation()
+    // fetchWeather()
     //Function (1)
     //Function (2)
 })
