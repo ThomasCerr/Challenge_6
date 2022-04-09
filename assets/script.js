@@ -3,10 +3,13 @@
 // (2) 5 Day forecast - Temp, Wind, Humidity in 2nd box
 // (3) Creates a recent search history div of what was inputted, and saved to local storag
 
+//Miscellaneaous Variables
+ const searchInput = document.querySelector('.search-weather')
+
 
 //Current Forecast Variables
 
-const mainDate = document.querySelector('.mainDate');
+const mainDate = document.querySelector('.hj');
 const mainTemp = document.querySelector('.mainTemp');
 const mainHumidity = document.querySelector('.mainHumidity');
 const mainUVIndex = document.querySelector('.mainUVIndex');
@@ -40,20 +43,43 @@ const forecastHumidity5 = document.querySelector('.humidity5');
 
 
 
-//API Calll
+var fetchWeather = function(){
+let key= '6ba32263f12394fd4bdedac009a4a7b3';
+let lat= ''
+let lon= ''
+let apiURL='https://api.openweathermap.org/data/2.5/onecall?lat='+lat +'&lon='+lon+'appid='+key;
+      
+fetch(apiURL)
+            .then(resp=>{
+                if(!resp.ok) throw new Error(resp.statusText);
+                return resp.json();
+})
+            .then(data=>{
+            showWeather(data)
+})
+            .catch(console.err);   
+}
 
-// let apiURL = ();
-// console.log(apiURL)
-// fetch(apiUrl).then(function (response) {
-//     response.json().then(function (data) {
-//         console.log(data);})})
+function showWeather() { (response) => {
+console.log(resp);
+let row = document.querySelector('.forecast');
+let html = '<div class="border-dark card border-4">' 
+            '<div class="card-body bg-light p-4">'
+            '<h5 class="card-title date1">Day 1</h5>'
+            '<p class="card-text tempOne">Temp: 65F</p>'
+            '<p class="card-text windOne">Wind: 9.53MPH</p>'
+            '<p class="card-text humidityOne">Humidity: 35%</p>'
+            '</div>'
+            '</div>';
+}
 
-
+}
 
 
 //Click Listener
 $('.btn').on('click', function(){
     console.log('hello');
+    fetchWeather()
     //Function (1)
     //Function (2)
 })
