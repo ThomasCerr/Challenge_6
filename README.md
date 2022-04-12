@@ -31,6 +31,6 @@ THEN I am again presented with current and future conditions for that city
 ```
 ## Mockup
 
-<img src= "https://github.com/ThomasCerr/Challenge-5_TC/blob/master/assets/images/example.PNG">
+<img src= "https://github.com/ThomasCerr/Challenge-6_TC/blob/master/assets/images/example.PNG">
 
 Link to deployed application: https://thomascerr.github.io/Challenge-6_TC/
